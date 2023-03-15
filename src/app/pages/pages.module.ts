@@ -5,6 +5,7 @@ import { UserspageComponent } from './userspage/userspage.component';
 import { LoginpageComponent } from './loginpage/loginpage.component';
 import { UserpostpageComponent } from './userpostpage/userpostpage.component';
 import { NotfoundpageComponent } from './notfoundpage/notfoundpage.component';
+import { ComponentsModule } from '../components/components.module';
 
 
 
@@ -17,7 +18,16 @@ import { NotfoundpageComponent } from './notfoundpage/notfoundpage.component';
     NotfoundpageComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ComponentsModule
+  ],
+  exports: [
+    HomepageComponent,
+    UserspageComponent,
+    LoginpageComponent,
+    UserpostpageComponent,
+    NotfoundpageComponent
+
   ]
 })
 export class PagesModule { }

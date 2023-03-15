@@ -5,7 +5,6 @@ import { PostitemcomponentComponent } from './postitemcomponent/postitemcomponen
 import { UserlistcomponentComponent } from './userlistcomponent/userlistcomponent.component';
 import { UseritemcomponentComponent } from './useritemcomponent/useritemcomponent.component';
 import { LoginformcomponentComponent } from './loginformcomponent/loginformcomponent.component';
-import { UserpostcomponentComponent } from './userpostcomponent/userpostcomponent.component';
 import { UserpostformcomponentComponent } from './userpostformcomponent/userpostformcomponent.component';
 
 
@@ -17,11 +16,18 @@ import { UserpostformcomponentComponent } from './userpostformcomponent/userpost
     UserlistcomponentComponent,
     UseritemcomponentComponent,
     LoginformcomponentComponent,
-    UserpostcomponentComponent,
     UserpostformcomponentComponent
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    PostlistcomponentComponent,
+    PostitemcomponentComponent,
+    UserlistcomponentComponent,
+    UseritemcomponentComponent,
+    LoginformcomponentComponent,
+    UserpostformcomponentComponent
   ]
 })
 export class ComponentsModule { }
