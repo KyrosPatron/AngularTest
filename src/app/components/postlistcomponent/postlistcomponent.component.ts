@@ -17,11 +17,7 @@ export class PostlistcomponentComponent {
 
 
   addComment(i: number, c: Commento) {
-
-
     this.postService.addComment(i, c);
-    console.log('inserito');
-
   }
 
 

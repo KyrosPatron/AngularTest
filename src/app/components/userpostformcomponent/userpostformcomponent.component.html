@@ -1,1 +1,18 @@
-<p>userpostformcomponent works!</p>
+<div *ngIf="isLogged()">
+    <h3>Publish a new Post:</h3>
+    <div>
+        <form #f="ngForm" (ngSubmit)="onSubmit(f)" ngNativeValidate>
+
+            <input name="title" ngModel required placeholder="Title">
+
+            <input name="message" ngModel required placeholder="Message">
+
+            <button>Publish</button>
+
+        </form>
+    </div>
+</div>
+<div *ngIf="!isLogged()">
+    <p>Can't post any massages , be sure about login</p>
+
+</div>
