@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthserviceService } from 'src/app/services/authservice.service';
 
 @Component({
   selector: 'app-header',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
+
+  constructor(private loginService: AuthserviceService) { }
+
+  isLogged() {
+    return this.loginService.isLogged();
+  }
 
 }

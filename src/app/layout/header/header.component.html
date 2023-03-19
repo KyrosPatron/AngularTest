@@ -1,1 +1,7 @@
-<p>header works!</p>
+<div>
+    <a routerLink="" routerLinkActive="active">Home</a>
+    <a routerLink="userpage" routerLinkActive="active">Users</a>
+    <a *ngIf="!isLogged()" routerLink="loginpage" routerLinkActive="active">Login</a>
+    <a *ngIf="isLogged()" routerLink="postpage" routerLinkActive="active">Publish</a>
+    <a routerLink="dkasjhdjik" routerLinkActive="active">NotFoundPage</a>
+</div>
