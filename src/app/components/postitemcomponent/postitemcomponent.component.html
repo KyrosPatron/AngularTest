@@ -1,1 +1,18 @@
-<p>postitemcomponent works!</p>
+<div>
+    <p>Title: {{shootInPost.title}}</p>
+    <p class="margL10 margT-20"> By: {{shootInPost.author.name}} {{shootInPost.author.surname}}</p>
+    <p class="margL30">{{shootInPost.message}}</p>
+    <p style="margin-bottom: -10px;">Comments:</p>
+    <div class="margL30" *ngFor="let c of shootInPost.comments">
+        <p>By: {{c.author.name}} {{c.author.surname}}</p>
+        <p class="margL30 margT-20">{{c.message}}</p>
+    </div>
+    <div *ngIf="isLogged()" class="margL30">
+        <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+            <input name="usrCom" ngModel required placeholder="Comment">
+            <button>Public Comment</button>
+        </form>
+    </div>
+
+    <hr />
+</div>

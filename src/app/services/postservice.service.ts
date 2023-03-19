@@ -22,8 +22,8 @@ export class PostserviceService {
     this.posts.push(po);
 
     us = { name: "Romolo", surname: "Faggiano", age: 15 };
-    co = { author: usCo, message: "Si bella bro!" };
-    po = { title: "Partita ", author: us, message: "Bella partita ragazzi", comments: [co] };
+    co = { author: usCo, message: "Non vedo l'ora di iniziare!" };
+    po = { title: "Caccia al tesoro ", author: us, message: "La caccia al tesoro si terrà domani", comments: [co] };
     this.posts.push(po);
 
   }
@@ -38,11 +38,16 @@ export class PostserviceService {
 
   }
 
+  addComment(i: number, c: Commento) {
+    this.posts[i].comments.push(c);
+
+  }
+
   getPostI(i: number) {
     return this.posts[i];
   }
 
-  viewPostArray() {
+  getPostArray() {
     return this.posts;
   }
 

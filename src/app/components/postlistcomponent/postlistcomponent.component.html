@@ -1,1 +1,4 @@
-<p>postlistcomponent works!</p>
+<div *ngFor="let p of posts;index as i">
+    <app-postitemcomponent [shootInPost]="p" (shootOutPostItem)="addComment(i,$event)"></app-postitemcomponent>
+
+</div>

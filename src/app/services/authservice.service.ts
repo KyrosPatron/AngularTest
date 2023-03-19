@@ -18,4 +18,8 @@ export class AuthserviceService {
     return this.isLog;
   }
 
+  getUser() {
+    return this.userLogin;
+  }
+
 }
