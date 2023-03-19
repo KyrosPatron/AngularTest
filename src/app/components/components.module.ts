@@ -6,6 +6,7 @@ import { UserlistcomponentComponent } from './userlistcomponent/userlistcomponen
 import { UseritemcomponentComponent } from './useritemcomponent/useritemcomponent.component';
 import { LoginformcomponentComponent } from './loginformcomponent/loginformcomponent.component';
 import { UserpostformcomponentComponent } from './userpostformcomponent/userpostformcomponent.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -20,7 +21,10 @@ import { UserpostformcomponentComponent } from './userpostformcomponent/userpost
     UserpostformcomponentComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
+
+
   ],
   exports: [
     PostlistcomponentComponent,

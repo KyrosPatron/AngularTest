@@ -1,1 +1,11 @@
-<p>loginformcomponent works!</p>
+<div *ngIf="!ShootInLoginLogged">
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)" ngNativeValidate>
+
+        <input name="usrName" ngModel required placeholder="Name User">
+
+        <input name="usrLName" ngModel required placeholder="LastName User">
+
+        <button>Login</button>
+
+    </form>
+</div>

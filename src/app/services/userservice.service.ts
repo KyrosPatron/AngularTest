@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class UserserviceService {
-  users!: User[];
+  users: User[] = [];
 
 
   fillExample() {
@@ -23,7 +23,7 @@ export class UserserviceService {
   }
 
   removeUser(u: User) {
-    this.users = this.users.filter((item, i) => i != this.users.indexOf(u));
+    this.users = this.users.filter((item, i) => i != this.users.indexOf(item));
 
   }
 
@@ -31,7 +31,7 @@ export class UserserviceService {
     return this.users[i];
   }
 
-  viewUserArray() {
+  getUserArray() {
     return this.users;
   }
 

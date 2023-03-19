@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-useritemcomponent',
+  selector: '[app-useritemcomponent]',
   templateUrl: './useritemcomponent.component.html',
   styleUrls: ['./useritemcomponent.component.css']
 })
 export class UseritemcomponentComponent {
+  @Input() shootInUserItem !: User;
 
 }

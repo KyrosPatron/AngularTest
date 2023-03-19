@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UserserviceService } from './services/userservice.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'TestConoscenzeAngular';
+  constructor(private userService: UserserviceService) { }
+  // Same thing in /layout/main
+  ngOnInit() {
+
+    this.userService.fillExample();
+  }
 }

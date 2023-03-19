@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class PostserviceService {
-  posts!: Post[];
+  posts: Post[] = [];
 
 
   fillExample() {

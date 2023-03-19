@@ -1,1 +1,8 @@
-<p>userlistcomponent works!</p>
+<table style="width: 600px;">
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Age</th>
+    </tr>
+    <tr *ngFor="let u of usrArr" app-useritemcomponent [shootInUserItem]="u"></tr>
+</table>
