@@ -1,6 +1,6 @@
 interface User {
-    name: String;
-    surname: String;
+    firstName: String;
+    lastName: String;
     age: number;
 }
 
@@ -14,4 +14,12 @@ interface Post {
 interface Commento {
     author: User;
     message: String;
+}
+
+interface UserApi {
+    limit: number;
+    skip: number;
+    total: number;
+    users: User[];
+
 }

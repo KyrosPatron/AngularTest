@@ -1,10 +1,10 @@
 <div>
     <p>Title: {{shootInPost.title}}</p>
-    <p class="margL10 margT-20"> By: {{shootInPost.author.name}} {{shootInPost.author.surname}}</p>
+    <p class="margL10 margT-20"> By: {{shootInPost.author.firstName}} {{shootInPost.author.lastName}}</p>
     <p class="margL30">{{shootInPost.message}}</p>
     <p style="margin-bottom: -10px;">Comments:</p>
     <div class="margL30" *ngFor="let c of shootInPost.comments">
-        <p>By: {{c.author.name}} {{c.author.surname}}</p>
+        <p>By: {{c.author.firstName}} {{c.author.lastName}}</p>
         <p class="margL30 margT-20">{{c.message}}</p>
     </div>
     <br>

@@ -14,14 +14,14 @@ export class PostserviceService {
     let co: Commento;
     let co1: Commento;
 
-    usCo = { name: "Marco", surname: "Lamella", age: 32 };
-    us = { name: "Tizio", surname: "Romani", age: 22 };
+    usCo = { firstName: "Marco", lastName: "Lamella", age: 32 };
+    us = { firstName: "Tizio", lastName: "Romani", age: 22 };
     co = { author: usCo, message: "Si bella bro!" };
     co1 = { author: usCo, message: "Anche se poteva andare meglio" };
     po = { title: "Partita ", author: us, message: "Bella partita ragazzi", comments: [co, co1] };
     this.posts.push(po);
 
-    us = { name: "Romolo", surname: "Faggiano", age: 15 };
+    us = { firstName: "Romolo", lastName: "Faggiano", age: 15 };
     co = { author: usCo, message: "Non vedo l'ora di iniziare!" };
     po = { title: "Caccia al tesoro ", author: us, message: "La caccia al tesoro si terrà domani", comments: [co] };
     this.posts.push(po);

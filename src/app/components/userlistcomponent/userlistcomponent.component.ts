@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { AuthserviceService } from 'src/app/services/authservice.service';
 import { UserserviceService } from 'src/app/services/userservice.service';
 
 @Component({
@@ -8,11 +7,15 @@ import { UserserviceService } from 'src/app/services/userservice.service';
   styleUrls: ['./userlistcomponent.component.css']
 })
 export class UserlistcomponentComponent {
-  usrArr!: User[];
+  usrArr: User[] = [];
   constructor(private userService: UserserviceService) { }
 
   ngOnInit() {
     this.usrArr = this.userService.getUserArray();
+    //console.log('--------SERVICE INIZIO-----------');
+    //console.log(this.userService.getUserArray());
+    //console.log('--------SERVICE FINE-----------');
+
   }
 
 }

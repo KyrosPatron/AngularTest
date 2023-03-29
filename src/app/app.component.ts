@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { UserserviceService } from './services/userservice.service';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -8,10 +9,14 @@ import { UserserviceService } from './services/userservice.service';
 })
 export class AppComponent {
   title = 'TestConoscenzeAngular';
+  error: string | null = null;
+
+
   constructor(private userService: UserserviceService) { }
+
+
   // Same thing in /layout/main
   ngOnInit() {
-
-    this.userService.fillExample();
+    this.userService.serviceOnInit();
   }
 }

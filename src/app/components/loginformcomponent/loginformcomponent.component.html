@@ -12,3 +12,6 @@
 <div *ngIf="ShootInLoginLogged">
     <p>Already logged-in , choose the page desidered</p>
 </div>
+<div *ngIf="error.length>2">
+    <p style="color:red;">Error: This user doesn't exist</p>
+</div>
